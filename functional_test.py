@@ -19,7 +19,17 @@ class NewVisitorTest(unittest.TestCase):
         # She notices the page title and header mention to-do lists
         self.assertIn('ROR', self.browser.title)
         header_text = self.browser.find_element_by_tag_name('h1').text  
-        self.assertIn('To-Do', header_text)
+        self.assertIn('eMERGE', header_text)
+
+        # She logs in using a username and password.
+        userinputbox = self.browser.find_element_by_id('id_new_item')
+        pwinputbox = self.browser.find_element_by_id('password')
+        
+        self.assertEqual(
+            inputbox.get_attribute('placeholder'),
+            'Enter a to-do item'
+        )
+        
 
         # She is invited to enter a to-do item straight away
         inputbox = self.browser.find_element_by_id('id_new_item')  

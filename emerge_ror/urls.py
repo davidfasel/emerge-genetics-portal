@@ -19,5 +19,6 @@ from ror import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home_page, name='home')
+    url(r'^$', views.login_page, name='login'),
+    url(r'^home/', views.home_page, name='home'),
 ]
