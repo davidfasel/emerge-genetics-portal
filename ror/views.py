@@ -7,7 +7,7 @@ import re, csv
 def login_page(request):
 
     if request.method == 'POST':
-        return redirect('/home')
+        return redirect('home')
         
     return render(request, 'login.html')
 
