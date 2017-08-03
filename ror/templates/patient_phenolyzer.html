@@ -1,0 +1,174 @@
+{% extends 'base_patient.html' %}
+
+
+{% block tab-pheno %}
+    <a class="nav-link active" href="{% url 'patient_phenolyzer' %}/{{ person.MRN }}">Phenolyzer</a>
+{% endblock %}
+                
+              
+{% block content %}  
+          <!-- content of tabbed area container -->
+
+          <div style="padding:1em; border: 1px solid #ddd; border-top:none; font-size:90%" >
+            
+            <h4 class="mt-2 ">Phenolyzer</h4>
+            <p class="small">Yang, Hui, Peter N. Robinson, and Kai Wang. Phenolyzer: phenotype-based prioritization of candidate genes for human diseases. Nature Methods (2015).</p>
+            <form class="form-inline">
+              <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 required" id="inlineFormInput" placeholder="Phenotype">
+
+              <button type="button" class="btn btn-primary" onclick="Submit()">Search</button>
+            </form>
+            <script>
+                function Submit() {
+                  $('#results_div').hide().slideDown('fast'); 
+                  if (!inlineFormInput.value) {inlineFormInput.value = 'Chronic Kidney Disease'}
+                  $('#disease_span').text(inlineFormInput.value)
+                }
+            </script>
+
+
+            <div id="results_div" style="padding:30px; display: none">
+              <h5> Variants of Interest for "<span id="disease_span">Chronic Kidney Disease</span>"</h5>
+              <p></p>
+              <div class="row">
+                <div class="col-sm-2">
+                  <strong>Variant:</strong>
+                </div>
+                <div class="col-sm-6">
+                  1:2342434; Het. c.338C>A, p.Ser113X, Ex. 4
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                    <strong>Type:</strong>
+                </div>
+                <div class="col-sm-4">
+                  Protein Truncating / Stopgain
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <strong>Gene:</strong>
+                </div>
+                <div class="col-sm-3">
+                  PMS2
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <strong>Pathogenicity:</strong>
+                </div>
+                <div class="col-sm-3">
+                  Pathogenic
+                </div>
+              </div>
+
+
+              <hr> 
+              <div class="row">
+                <div class="col-sm-2">
+                  <strong>Variant:</strong>
+                </div>
+                <div class="col-sm-4">
+                  15:568954 A>G Missense
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <strong>Type:</strong>
+                </div>
+                <div class="col-sm-3">
+                  Amino Acid Change
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <strong>Gene:</strong>
+                </div>
+                <div class="col-sm-3">
+                  ABC21
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <strong>Pathogenicity:</strong>
+                </div>
+                <div class="col-sm-3">
+                  Unknown
+                </div>
+              </div>
+
+              <hr>
+
+              <div class="row">
+                <div class="col-sm-2">
+                  <strong>Variant:</strong>
+                </div>
+                <div class="col-sm-6">
+                  11:2984645; Het. c.338C>A, p.Ser113XG, Ex. 2
+                </div>
+     
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                    <strong>Type:</strong>
+                </div>
+                <div class="col-sm-4">
+                  Protein Truncating / Splice Site
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <strong>Gene:</strong>
+                </div>
+                <div class="col-sm-3">
+                  XYZ12
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <strong>Pathogenicity:</strong>
+                </div>
+                <div class="col-sm-3">
+                  Pathogenic
+                </div>
+              </div>
+
+              <hr>
+
+
+              <div class="row">
+                <div class="col-sm-2">
+                  <strong>Variant:</strong>
+                </div>
+                <div class="col-sm-6">
+                  11:2984645; Het. c.338C>A, p.Ser15Arg, Ex. 1
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                    <strong>Type:</strong>
+                </div>
+                <div class="col-sm-4">
+                  Protein Truncating / Splice Site
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <strong>Gene:</strong>
+                </div>
+                <div class="col-sm-3">
+                  XYZ12
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">
+                  <strong>Pathogenicity:</strong>
+                </div>
+                <div class="col-sm-3">
+                  Pathogenic
+                </div>
+              </div>
+            </div>
+          </div> <!-- end content of tabbed area container -->
+{% endblock %}

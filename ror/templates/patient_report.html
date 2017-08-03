@@ -1,0 +1,132 @@
+{% extends 'base_patient.html' %}
+
+
+{% block tab-report %}
+    <a class="nav-link active" href="{% url 'patient_report' %}/{{ person.MRN }}">CLIA Report</a>
+{% endblock %}
+                
+              
+{% block content %} 
+
+          <!-- content of tabbed area container -->
+          <div style="padding:1em; border: 1px solid #ddd; border-top:none; font-size:90%">
+            
+            <div class="row">
+                <div class="col"><h4 class="mt-2 mb-4 d-inline-block"> Molecular Diagnostics Report </h4></div>
+                <div class="col text-right">DNA Sample: <select><option>#13924082 6/23/2016</option><option>#24596685 5/16/2015</option></select></div>
+            </div>
+            <p><a href="#">[Download PDF]</a></p>
+          
+            <div class="row">
+                <p class="col">
+                    <strong>Laboratory for Molecular Medicine </strong><br>
+                    65 Landsdowne Street, Cambridge MA 02139 <br>
+                    Phone: (617) 768-8500 <br>
+                    Fax: (617) 768-8513 <br>
+                    www.partners.org/personalizedmedicine/lmm
+                </p>
+            
+                <p class="col">
+
+                    <strong>Lab Accession:</strong> PM-16-A07001<br>
+                    <strong>Patient ID:</strong> 42987564<br>
+                    <strong>Birth Date:</strong> 1/1/2115<br>
+                    <strong>Age/Sex:</strong> 62 Year old Male<br>
+                </p>
+            </div>
+            
+            <hr>
+            
+            <div class="row">
+                <p class="col">
+            
+                    <strong>Specimen Type:</strong> DNA, Isolated - Blood, Peripheral<br>
+                    <strong>Related Accession(s): </strong> <br>
+                    <strong>Referring Physician: </strong>EMERGE-CLINIC-TEST <br>
+                    <strong>Copies To: </strong>GENEINSIGHT <br>EMERGE-HUB-TEST GENEINSIGHT <br>
+                </p>
+                    
+                <p class="col">
+                    <strong>Received Date:</strong> 9/1/2016 <br>
+                    <strong>Referring Facility:</strong> HARVARD <br>
+                    <strong>Referring Fac. MRN:</strong> <br>
+                    <strong>Lab Control Number:</strong> 10038176_68282505-2_SM-B3NZL<br>
+                    <strong>Family Number:</strong> FAB123
+                </p>
+            </div>
+
+            <p><strong>Test Description</strong> - Sequence Confirmation Test<br>
+              <strong>Test Performed</strong> - SeqConV2<br>
+              <strong>Indication For Test</strong> - Not selected for trait
+            </p>
+            
+            <hr> 
+            <h4>Results</h4>
+            <p><strong>DNA VARIANTS:</strong> <br> Heterozygous c.338C>A (p.Ser113X), Exon 4, PMS2, Pathogenic </p>
+            
+            <p><strong>Interpretation:</strong> <br>
+                Positive. DNA sequencing of the coding regions and splice sites of 97 genes 
+                (see methodology section below) identified the variants listed above. Copy number analysis 
+                using NGS could not be completed because data did not meet quality standards for CNV detection. 
+                For a list of exons that are incompletely covered please see "Additional notes and disclaimers" 
+                section below.
+            </p>
+            
+            <p><strong>Summary:</strong> <br>
+                This individual carries a Pathogenic variant in the PMS2 gene. The 
+                available information on this variant is described below. Disease-causing variants in the 
+                PMS2 gene are strongly associated with Lynch syndrome and this individual may be at risk 
+                for developing colorectal cancer / polyps. 
+            </p>
+            
+            <p>
+                <strong>Additional Notes And Disclaimers: </strong> <br>
+                Disease penetrance and severity can vary due to modifier genes and/or environmental factors. The 
+                significance of a variant should therefore be interpreted in the context of the individual's 
+                clinical manifestations 
+            </p>
+            <p>
+                <strong>Detailed Variant Interpretations:</strong> <br>
+                p.Ser113X, c.338C>A (PMS2; NM_000535.5; Chr7g.6043336G>T; GRCh37):
+                The p.Ser113X variant in PMS2 has not been previously reported in individuals with 
+                Lynch syndrome and was absent from large population studies. This nonsense variant
+                leads to a premature termination codon at position 113, which is predicted to lead 
+                to a truncated or absent protein. Heterozygous loss of function of the PMS2 gene 
+                is an established disease mechanism in Lynch syndrome 
+                (http://www.ncbi.nlm.nih.gov/books/NBK1211/). In summary, this variant meets 
+                our criteria to be classified as pathogenic for Lynch syndrome 
+                (http://www.partners.org/personalizedmedicine/LMM) based upon predicted impact 
+                to the protein and absence in controls. 
+            </p>
+            
+            <p>
+                <strong>Recommendation:</strong>  <br>
+                Genetic counseling is 
+                recommended for this individual and their relatives. Familial variant testing 
+                is available for other relatives if desired. For assistance in locating genetic 
+                counseling services or disease specialists, please call the laboratory at 
+                617-768-8500 or email at LMM@partners.org. Please note that variant classifications 
+                may change over time if more information becomes available. Please contact us at 
+                617-768-8500 or LMM@partners.org.
+            </p>
+            
+            
+            <h5 class="mt-5">TEST INFORMATION </h5>
+            
+            <p> 
+                <strong>Background: </strong> <br>
+                HOLD FOR BACKGROUND TEXT 
+            <p> 
+                <strong>Methodology: </strong> <br>
+                HOLD FOR METHODOLOGY TEXT 
+            
+            <p>   
+                <strong>References: </strong> <br>
+                Hendriks YM, Jagmohan-Changur S, van der Klift HM, Morreau H, van Puijenbroek M, 
+                Tops C, van Os T, Wagner A, Ausems MG, Gomez E, Breuning MH, Bröcker-Vriends AH, 
+                Vasen HF, Wijnen JT. 2006. Heterozygous mutations in PMS2 cause hereditary 
+                nonpolyposis colorectal carcinoma (Lynch syndrome). Gastroenterology. 130(2):312-22.
+            </p>
+          </div>
+          <!-- end content of tabbed area container -->
+{% endblock %}

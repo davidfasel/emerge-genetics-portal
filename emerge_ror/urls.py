@@ -21,4 +21,14 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.login_page, name='login'),
     url(r'^home/', views.home_page, name='home'),
+    url(r'^refresh_database', views.refresh_database, name='refresh_database'),
+    url(r'^patient/report', views.patient_report_page, name='patient_report'),
+    url(r'^patient/notes', views.patient_notes_page, name='patient_notes'),
+    url(r'^patient/summary', views.patient_summary_page, name='patient_summary'),
+    url(r'^patient/research', views.patient_research_page, name='patient_research'),
+    url(r'^patient/phenolyzer', views.patient_phenolyzer_page, name='patient_phenolyzer'),
+
 ]
+
+
+

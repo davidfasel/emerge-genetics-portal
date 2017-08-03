@@ -4,3 +4,8 @@ __pycache__
 *.swp
 .DS_Store
 *.swo
+*.old
+ror/migrations/*
+.idea/
+/db.sqlite3
+ror/migrations/

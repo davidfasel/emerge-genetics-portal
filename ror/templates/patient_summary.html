@@ -1,0 +1,352 @@
+{% extends 'base_patient.html' %}
+
+
+{% block tab-summary %}
+    <a class="nav-link active" href="{% url 'patient_summary' %}/{{ person.MRN }}">Summary</a>
+{% endblock %}
+                
+              
+{% block content %} 
+          
+          <!-- content of tabbed area container -->
+          <div style="padding:1em; border: 1px solid #ddd; border-top:none; font-size:90%" >
+            
+            <h4 class="mt-2 mb-4">Variant Summary</h4>
+            <h5 class="mb-3 mt-2">CLIA Validated Variants</h5>
+
+
+            <div class="row">
+              <div class="col-sm-2">
+                <strong>Variant:</strong>
+              </div>
+              <div class="col-sm-5">
+                1:2342434; Het. c.338C>A, p.Ser113X, Ex. 4
+              </div>
+              <div class=" col-sm-2">
+                <strong>Assigned to:</strong>
+              </div>
+              <div class="col-sm-3">
+                J. Finch <span class="small"><a href="#" >[change]</a></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                  <strong>Type:</strong>
+              </div>
+              <div class="col-sm-4">
+                Protein Truncating / Stopgain
+              </div>
+              <div class="offset-sm-1 col-sm-2">
+                <strong>Status:</strong>
+              </div>
+              <div class="col-sm-3">
+                <span class="text-danger">Action Required</span> <span class="small"><a href="#" >[change]</a></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <strong>Gene:</strong>
+              </div>
+              <div class="col-sm-3">
+                PMS2
+              </div>
+              <div class="offset-sm-1 col-sm-2">
+                
+              </div>
+              <div class="col-sm-3">
+                
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <strong>Pathogenicity:</strong>
+              </div>
+              <div class="col-sm-3">
+                Pathogenic
+              </div>
+              <div class="offset-sm-1 col-sm-2">
+                
+              </div>
+              <div class="col-sm-3">
+                
+              </div>
+            </div>
+            <div class="row mt-2 mb-3">
+                <div class="col">
+                  <a href="#" onclick="$('#notes1').slideToggle()" >View Notes</a>
+                </div>
+            </div>
+            
+            <div class="row mt-1" id="notes1" style="display:none">
+                
+                <div class="col">
+                  <form class="form-inline">
+                    <textarea class="form-control mr-sm-2 mb-4" style="width:80%" placeholder="Add Note"></textarea>
+                    <button type="submit" class="btn btn-sm mb-4">Submit</button>
+                  </form>
+                  <p class="mb-4">
+                    2017-01-23 13:59:01  <br>
+                    <em>M. Drake assigned Variant 1:2342434 to J. Finch.</em>
+                  </p>
+                  <p class="mb-4">
+                    2017-01-23 14:00:33<br>
+                    M.Drake: I left a voicemail for the patient to contact us to make an appointment.  Assigning to Jane for follow up.
+                  </p>
+                
+                  <p class="mb-4">
+                    2017-01-22 11:11:33<br>
+                    User: M. Drake <br>
+                    Sent report by mail to patient.  Will follow up with a phone call.
+                  </p>
+                  <p class="mb-4">
+                    2017-01-11 01:12:17<br>
+                    <em>System assigned Variant 15:568954 to H. Craft.</em>
+                  </p>
+                </div>
+            </div>
+
+
+            <hr> 
+            <div class="row">
+              <div class="col-sm-2">
+                <strong>Variant:</strong>
+              </div>
+              <div class="col-sm-4">
+                15:568954 A>G Missense
+              </div>
+              <div class="offset-sm-1 col-sm-2">
+                <strong>Assigned to:</strong>
+              </div>
+              <div class="col-sm-3">
+                H. Craft <span class="small"><a href="#" >[change]</a></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <strong>Type:</strong>
+              </div>
+              <div class="col-sm-3">
+                Amino Acid Change
+              </div>
+              <div class="offset-sm-2 col-sm-2">
+                <strong>Status:</strong>
+              </div>
+              <div class="col-sm-3">
+                <span class="">OK</span> <span class="small"><a href="#" >[change]</a></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <strong>Gene:</strong>
+              </div>
+              <div class="col-sm-3">
+                ABC21
+              </div>
+              <div class="offset-sm-1 col-sm-2">
+                
+              </div>
+              <div class="col-sm-3">
+                
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <strong>Pathogenicity:</strong>
+              </div>
+              <div class="col-sm-3">
+                Unknown
+              </div>
+              <div class="offset-sm-1 col-sm-2">
+                
+              </div>
+              <div class="col-sm-3">
+                
+              </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col">
+                  <a href="#" onclick="$('#notes2').slideToggle()" >View Notes</a>
+                </div>
+            </div>
+            <div class="row mt-1" id="notes2" style="display:none">
+                <div class="col">
+                  <form class="form-inline">
+                    <textarea class="form-control mr-sm-2 mb-4" style="width:80%" placeholder="Add Note"></textarea>
+                    <button type="submit" class="btn btn-sm mb-4">Submit</button>
+                  </form>
+                  <p class="mb-4">
+                    2017-01-11 01:12:17<br>
+                    <em>System assigned Variant 15:568954 to H. Craft.</em>
+                  </p>
+                </div>
+            </div>
+
+
+
+
+
+          <h5 class="mb-3 mt-5" >ACMG Variants</h5>
+
+
+            <div class="row">
+              <div class="col-sm-2">
+                <strong>Variant:</strong>
+              </div>
+              <div class="col-sm-5">
+                11:2984645; Het. c.338C>A, p.Ser113X, Ex. 4
+              </div>
+              <div class=" col-sm-2">
+                <strong>Assigned to:</strong>
+              </div>
+              <div class="col-sm-3">
+                J. Finch <span class="small"><a href="#" >[change]</a></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                  <strong>Type:</strong>
+              </div>
+              <div class="col-sm-4">
+                Protein Truncating / Splice Site
+              </div>
+              <div class="offset-sm-1 col-sm-2">
+                <strong>Status:</strong>
+              </div>
+              <div class="col-sm-3">
+                <span class="text-danger">Action Required</span> <span class="small"><a href="#" >[change]</a></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <strong>Gene:</strong>
+              </div>
+              <div class="col-sm-3">
+                XYZ12
+              </div>
+              <div class="offset-sm-1 col-sm-2">
+                
+              </div>
+              <div class="col-sm-3">
+                
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <strong>Pathogenicity:</strong>
+              </div>
+              <div class="col-sm-3">
+                Pathogenic
+              </div>
+              <div class="offset-sm-1 col-sm-2">
+                
+              </div>
+              <div class="col-sm-3">
+                
+              </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col">
+                  <a href="#" onclick="$('#notes3').slideToggle()" >View Notes</a>
+                </div>
+            </div>
+            <div class="row mt-1" id="notes3" style="display:none">
+                <div class="col">
+                  <form class="form-inline">
+                    <textarea class="form-control mr-sm-2 mb-4" style="width:80%" placeholder="Add Note"></textarea>
+                    <button type="submit" class="btn btn-sm mb-4">Submit</button>
+                  </form>
+                  <p class="mb-4">
+                    2017-01-11 01:12:17<br>
+                    <em>System assigned Variant 11:2984645 to J. Finch</em>
+                  </p>
+                </div>
+            </div>
+
+
+
+
+
+          <h5 class="mb-3 mt-5" >Pharmacogenomic Variants</h5>
+
+
+            <div class="row">
+              <div class="col-sm-2">
+                <strong>Variant:</strong>
+              </div>
+              <div class="col-sm-5">
+                12:65456464; Het. c.338C>A, p.Ser113X, Ex. 4
+              </div>
+              <div class=" col-sm-2">
+                <strong>Assigned to:</strong>
+              </div>
+              <div class="col-sm-3">
+                J. Finch <span class="small"><a href="#" >[change]</a></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                  <strong>Type:</strong>
+              </div>
+              <div class="col-sm-4">
+                Protein Truncating / Splice Site
+              </div>
+              <div class="offset-sm-1 col-sm-2">
+                <strong>Status:</strong>
+              </div>
+              <div class="col-sm-3">
+                <span class="">OK</span> <span class="small"><a href="#" >[change]</a></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <strong>Gene:</strong>
+              </div>
+              <div class="col-sm-3">
+                XYZ12
+              </div>
+              <div class="offset-sm-1 col-sm-2">
+                
+              </div>
+              <div class="col-sm-3">
+                
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <strong>Pathogenicity:</strong>
+              </div>
+              <div class="col-sm-3">
+                Pathogenic
+              </div>
+              <div class="offset-sm-1 col-sm-2">
+                
+              </div>
+              <div class="col-sm-3">
+                
+              </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col">
+                  <a href="#" onclick="$('#notes4').slideToggle()" >View Notes</a>
+                </div>
+            </div>
+            <div class="row mt-1" id="notes4" style="display:none">
+                <div class="col">
+                  <form class="form-inline">
+                    <textarea class="form-control mr-sm-2 mb-4" style="width:80%" placeholder="Add Note"></textarea>
+                    <button type="submit" class="btn btn-sm mb-4">Submit</button>
+                  </form>
+                  <p class="mb-4">
+                    2017-01-11 01:12:17<br>
+                    <em>System assigned Variant 12:65456464 to J. Finch</em>
+                  </p>
+                </div>
+            </div>
+
+
+
+
+          
+          
+          </div> <!-- end content of tabbed area container -->
+{% endblock%}

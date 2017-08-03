@@ -1,0 +1,91 @@
+{% extends 'base_patient.html' %}
+
+
+{% block tab-research %}
+    <a class="nav-link active" href="{% url 'patient_research' %}/{{ person.MRN }}">Research Variants</a>
+{% endblock %}
+                
+              
+{% block content %}  
+<style> .main {max-width:10000px!important}</style>
+
+          <!-- content of tabbed area container -->
+          <div style="padding:1em; border: 1px solid #ddd; border-top:none; overflow-x: scroll; min-width:900px" >
+
+
+            <div style="border:1px solid white; border-bottom: none; background-color: #ccc; padding: 10px; ">
+              <a href="JavaScript:$('#div_filters').slideToggle()" >Filter</a>
+            </div>
+            
+            <form method="post"> 
+                <div id="div_filters" style="border:1px solid white; border-bottom: none; background-color: #eee; margin: 0; display:none">
+                  <div class="row p-1 "  >
+                    <div class="col m-1"  >
+                      Chr: <input type="text" class="mr-3"placeholder="ex 1-3, 7"> 
+                      Pos: <input type="text" placeholder="Min"> <input class="mr-3" type="text" placeholder="Max">
+                      Gene: <input type="text" name="gene" class="mr-3" placeholder="Gen1,Gen2">
+                      Functional:
+                      <select>
+                        <option>All</option>
+                        <option>Missense</option>
+                        <option>Inframe</option>
+                        <option>LOF</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  <div class="row p-1 " >
+                    <div class="col m-1"  >
+                       Scores: <input type="text" style="width:7em" placeholder="Min CADD"> 
+                       <input class="mr-3" type="text" style="width:7em"  placeholder="Min Poly">
+                       Pop: 
+                       <select>
+                        <option>Max</option>
+                        <option>Min</option>
+                      </select>
+                      <input ="mr-5" type="text" placeholder="Freq"> 
+                      <input style="margin-left: 100px" type="submit" value="Apply Filter" >
+                    </div>
+                  </div>
+                </div>
+                {% csrf_token %}
+            </form>
+
+
+
+            <table class="table table-sm table-bordered table-striped table-hover" style="min-width: 600">
+              <thead style="background-color: #ccc">
+                <tr>
+                <th >Chr</th>
+                <th >Pos</th>
+                <th >ID</th>
+                <th >Ref</th>
+                <th >Alt</th>
+                <th >Gene</th>
+                <th >Types</th>
+                </tr>
+              </thead>
+              <tbody>
+               
+               {% if not variants %}
+               <tr><td colspan="7"> No results <a href=".">clear</a></td></tr>
+               {% endif %}
+               
+               {% for variant in variants %}
+               <tr >
+                <td>{{ variant.chromosome }}</td>
+                <td>{{ variant.position }}</td>
+                <td>{{ variant.rs_id }}</td>
+                <td>{{ variant.ref }}</td>
+                <td>{{ variant.alt }}</td>
+                <td>{{ variant.gene }}</td>
+                <td>{{ variant.func_type }}</td>
+               </tr>
+               {% endfor %}
+               
+               </tbody>
+              </table>
+  
+          </div> <!-- end content of tabbed area container -->
+
+{% endblock %}
