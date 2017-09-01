@@ -1,5 +1,5 @@
 {% extends 'base_patient.html' %}
-
+{% load staticfiles %}
 
 {% block tab-pheno %}
     <a class="nav-link active" href="{% url 'patient_phenolyzer' %}/{{ person.MRN }}">Phenolyzer</a>
@@ -16,7 +16,7 @@
             <form class="form-inline">
               <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 required" id="inlineFormInput" placeholder="Phenotype">
 
-              <button type="button" class="btn btn-primary" onclick="Submit()">Search</button>
+              <button type="button" class="btn btn-primary" onclick="Submit()">Search<img class="star" src="{% static 'star2.png' %}" ></button>
             </form>
             <script>
                 function Submit() {

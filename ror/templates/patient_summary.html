@@ -1,4 +1,5 @@
 {% extends 'base_patient.html' %}
+{% load staticfiles %}
 
 
 {% block tab-summary %}
@@ -73,7 +74,7 @@
             </div>
             <div class="row mt-2 mb-3">
                 <div class="col">
-                  <a href="#" onclick="$('#notes1').slideToggle()" >View Notes</a>
+                  <a href="#" onclick="$('#notes1').slideToggle()" >View Notes<img class="star" src="{% static 'star2.png' %}" ></a>
                 </div>
             </div>
             
@@ -165,7 +166,7 @@
             </div>
             <div class="row mt-2">
                 <div class="col">
-                  <a href="#" onclick="$('#notes2').slideToggle()" >View Notes</a>
+                  <a href="#" onclick="$('#notes2').slideToggle()" >View Notes<img class="star" src="{% static 'star2.png' %}" ></a>
                 </div>
             </div>
             <div class="row mt-1" id="notes2" style="display:none">
@@ -246,7 +247,7 @@
             </div>
             <div class="row mt-2">
                 <div class="col">
-                  <a href="#" onclick="$('#notes3').slideToggle()" >View Notes</a>
+                  <a href="#" onclick="$('#notes3').slideToggle()" >View Notes<img class="star" src="{% static 'star2.png' %}" ></a>
                 </div>
             </div>
             <div class="row mt-1" id="notes3" style="display:none">
@@ -327,7 +328,7 @@
             </div>
             <div class="row mt-2">
                 <div class="col">
-                  <a href="#" onclick="$('#notes4').slideToggle()" >View Notes</a>
+                  <a href="#" onclick="$('#notes4').slideToggle()" >View Notes<img class="star" src="{% static 'star2.png' %}" ></a>
                 </div>
             </div>
             <div class="row mt-1" id="notes4" style="display:none">

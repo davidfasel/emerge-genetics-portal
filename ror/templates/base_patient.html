@@ -32,7 +32,7 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="../../home">Dashboard <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../../home">Dashboard<img class="star" src="{% static 'star2.png' %}" ><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Settings</a>
@@ -47,7 +47,7 @@
         <form class="form-inline mt-2 mt-md-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          <a href="/" class="ml-3" style="color:white">Log out </a>
+          <a href="/" class="ml-3" style="color:white">Log out<img class="star" src="{% static 'star2.png' %}" > </a>
         </form>
       </div>
     </nav>
@@ -108,12 +108,13 @@
           <ul class="nav nav-tabs" style="margin-top: 2em">
             <li class="nav-item">
                 {% block tab-summary %}
-                <a class="nav-link" href="{% url 'patient_summary' %}/{{ person.MRN }}">Summary</a>
+                <a class="nav-link" href="{% url 'patient_summary' %}/{{ person.MRN }}">Summary<img class="star" src="{% static 'star2.png' %}" ></a>
                 {% endblock %}
             </li>
             <li class="nav-item">
                 {% block tab-report %}
-                <a class="nav-link" href="{% url 'patient_report' %}/{{ person.MRN }}">CLIA Report</a>
+                <a class="nav-link" href="{% url 'patient_report' %}/{{ person.MRN }}">CLIA Report<img class="star" src="{% static 'star2.png' %}" ></a>
+                
                 {% endblock %}
             </li>
             <!-- 
@@ -126,12 +127,12 @@
 
             <li class="nav-item">
                 {% block tab-research %}
-                <a class="nav-link" href="{% url 'patient_research' %}/{{ person.MRN }}">Research Variants</a>
+                <a class="nav-link" href="{% url 'patient_research' %}/{{ person.MRN }}">Research Variants<img class="star" src="{% static 'star2.png' %}" ></a>
                 {% endblock %}
             </li>
             <li class="nav-item">
                 {% block tab-pheno %}
-                <a class="nav-link" href="{% url 'patient_phenolyzer' %}/{{ person.MRN }}">Phenolyzer</a>
+                <a class="nav-link" href="{% url 'patient_phenolyzer' %}/{{ person.MRN }}">Phenolyzer<img class="star" src="{% static 'star2.png' %}" ></a>
                 {% endblock %}
             </li>
           </ul>
