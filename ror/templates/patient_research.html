@@ -1,5 +1,5 @@
 {% extends 'base_patient.html' %}
-
+{% load staticfiles %}
 
 {% block tab-research %}
     <a class="nav-link active" href="{% url 'patient_research' %}/{{ person.MRN }}">Research Variants</a>
@@ -14,7 +14,7 @@
 
 
             <div style="border:1px solid white; border-bottom: none; background-color: #ccc; padding: 10px; ">
-              <a href="JavaScript:$('#div_filters').slideToggle()" >Filter</a>
+              <a href="JavaScript:$('#div_filters').slideToggle()" >Filter<img class="star" src="{% static 'star2.png' %}" ></a>
             </div>
             
             <form method="post"> 
@@ -23,7 +23,7 @@
                     <div class="col m-1"  >
                       Chr: <input type="text" class="mr-3"placeholder="ex 1-3, 7"> 
                       Pos: <input type="text" placeholder="Min"> <input class="mr-3" type="text" placeholder="Max">
-                      Gene: <input type="text" name="gene" class="mr-3" placeholder="Gen1,Gen2">
+                      Gene: <input type="text" style="margin-right:0!important" name="gene" class="mr-3" placeholder="Gen1,Gen2"><img class="star" src="{% static 'star2.png' %}" >
                       Functional:
                       <select>
                         <option>All</option>
@@ -44,7 +44,7 @@
                         <option>Min</option>
                       </select>
                       <input ="mr-5" type="text" placeholder="Freq"> 
-                      <input style="margin-left: 100px" type="submit" value="Apply Filter" >
+                      <input style="margin-left: 100px;" type="submit" value="Apply Filter" ><img class="star" src="{% static 'star2.png' %}" >
                     </div>
                   </div>
                 </div>

@@ -17,6 +17,8 @@ h1 {
   border-bottom: 1px solid #eee;
 }
 
+img.star {vertical-align:text-top; width:8px;}
+
 /*
  * Sidebar
  */
@@ -68,3 +70,6 @@ h1 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+
+.action_required {color:red}
+.assigned {color: #888}

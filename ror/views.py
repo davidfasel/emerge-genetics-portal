@@ -1,3 +1,4 @@
+import os
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from ror.models import Person, Variant
@@ -16,7 +17,7 @@ def refresh_database(request):
 
     Person.objects.all().delete()
     Variant.objects.all().delete()
-    with open('data_files/people.csv') as f:
+    with open('/var/www/emerge-genetics-portal/data_files/people.csv') as f:
         reader = csv.reader(f)
         for row in reader:
             Person.objects.create(
@@ -26,7 +27,7 @@ def refresh_database(request):
                 status = row[3],
                 assigned = row[4],
             )
-    with open('data_files/variants.csv') as f:
+    with open('/var/www/emerge-genetics-portal/data_files/variants.csv') as f:
         reader = csv.reader(f)
         for row in reader:
              Variant.objects.create(
