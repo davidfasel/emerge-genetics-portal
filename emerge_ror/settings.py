@@ -25,7 +25,7 @@ SECRET_KEY = 'o%xb9=onf#=$m$!7_5+!e#96pr#c$32!ha)9)ml8+abs+-fpnx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['156.145.115.160']
+ALLOWED_HOSTS = ['156.145.115.160', 'emerge.dbmi.columbia.edu']
 
 
 # Application definition
